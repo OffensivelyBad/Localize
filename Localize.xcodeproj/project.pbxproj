@@ -10,7 +10,35 @@
 		2908B3822049ADB10093C24C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908B3812049ADB10093C24C /* AppDelegate.swift */; };
 		2908B3842049ADB10093C24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2908B3832049ADB10093C24C /* Assets.xcassets */; };
 		2908B3872049ADB10093C24C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2908B3852049ADB10093C24C /* MainMenu.xib */; };
+		2908B3962049ADCD0093C24C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2908B3952049ADCD0093C24C /* Cocoa.framework */; };
+		2908B3992049ADCD0093C24C /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908B3982049ADCD0093C24C /* SourceEditorExtension.swift */; };
+		2908B39B2049ADCD0093C24C /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2908B39A2049ADCD0093C24C /* SourceEditorCommand.swift */; };
+		2908B3A02049ADCD0093C24C /* Localizer.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2908B3932049ADCD0093C24C /* Localizer.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2908B39E2049ADCD0093C24C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2908B3762049ADB10093C24C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2908B3922049ADCD0093C24C;
+			remoteInfo = Localizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2908B3A42049ADCD0093C24C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2908B3A02049ADCD0093C24C /* Localizer.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2908B37E2049ADB10093C24C /* Localize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Localize.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +47,12 @@
 		2908B3862049ADB10093C24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2908B3882049ADB10093C24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2908B3892049ADB10093C24C /* Localize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localize.entitlements; sourceTree = "<group>"; };
+		2908B3932049ADCD0093C24C /* Localizer.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Localizer.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2908B3952049ADCD0093C24C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		2908B3982049ADCD0093C24C /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		2908B39A2049ADCD0093C24C /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		2908B39C2049ADCD0093C24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2908B39D2049ADCD0093C24C /* Localizer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Localizer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +63,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2908B3902049ADCD0093C24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2908B3962049ADCD0093C24C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				2908B3802049ADB10093C24C /* Localize */,
+				2908B3972049ADCD0093C24C /* Localizer */,
+				2908B3942049ADCD0093C24C /* Frameworks */,
 				2908B37F2049ADB10093C24C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				2908B37E2049ADB10093C24C /* Localize.app */,
+				2908B3932049ADCD0093C24C /* Localizer.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +105,25 @@
 			path = Localize;
 			sourceTree = "<group>";
 		};
+		2908B3942049ADCD0093C24C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2908B3952049ADCD0093C24C /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2908B3972049ADCD0093C24C /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				2908B3982049ADCD0093C24C /* SourceEditorExtension.swift */,
+				2908B39A2049ADCD0093C24C /* SourceEditorCommand.swift */,
+				2908B39C2049ADCD0093C24C /* Info.plist */,
+				2908B39D2049ADCD0093C24C /* Localizer.entitlements */,
+			);
+			path = Localizer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -70,15 +134,34 @@
 				2908B37A2049ADB10093C24C /* Sources */,
 				2908B37B2049ADB10093C24C /* Frameworks */,
 				2908B37C2049ADB10093C24C /* Resources */,
+				2908B3A42049ADCD0093C24C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2908B39F2049ADCD0093C24C /* PBXTargetDependency */,
 			);
 			name = Localize;
 			productName = Localize;
 			productReference = 2908B37E2049ADB10093C24C /* Localize.app */;
 			productType = "com.apple.product-type.application";
+		};
+		2908B3922049ADCD0093C24C /* Localizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2908B3A12049ADCD0093C24C /* Build configuration list for PBXNativeTarget "Localizer" */;
+			buildPhases = (
+				2908B38F2049ADCD0093C24C /* Sources */,
+				2908B3902049ADCD0093C24C /* Frameworks */,
+				2908B3912049ADCD0093C24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Localizer;
+			productName = Localizer;
+			productReference = 2908B3932049ADCD0093C24C /* Localizer.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -91,6 +174,10 @@
 				ORGANIZATIONNAME = "Shawn Roller";
 				TargetAttributes = {
 					2908B37D2049ADB10093C24C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					2908B3922049ADCD0093C24C = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				2908B37D2049ADB10093C24C /* Localize */,
+				2908B3922049ADCD0093C24C /* Localizer */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +212,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2908B3912049ADCD0093C24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -135,7 +230,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2908B38F2049ADCD0093C24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2908B3992049ADCD0093C24C /* SourceEditorExtension.swift in Sources */,
+				2908B39B2049ADCD0093C24C /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2908B39F2049ADCD0093C24C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2908B3922049ADCD0093C24C /* Localizer */;
+			targetProxy = 2908B39E2049ADCD0093C24C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2908B3852049ADB10093C24C /* MainMenu.xib */ = {
@@ -258,6 +370,7 @@
 		2908B38D2049ADB10093C24C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Localize/Localize.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -274,6 +387,7 @@
 		2908B38E2049ADB10093C24C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Localize/Localize.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -283,6 +397,38 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.Localize";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		2908B3A22049ADCD0093C24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer/Localizer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = Localizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.Localize.Localizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		2908B3A32049ADCD0093C24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Localizer/Localizer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = EWH85CQYYJ;
+				INFOPLIST_FILE = Localizer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.offensively-bad.Localize.Localizer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
@@ -304,6 +450,15 @@
 			buildConfigurations = (
 				2908B38D2049ADB10093C24C /* Debug */,
 				2908B38E2049ADB10093C24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2908B3A12049ADCD0093C24C /* Build configuration list for PBXNativeTarget "Localizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2908B3A22049ADCD0093C24C /* Debug */,
+				2908B3A32049ADCD0093C24C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
